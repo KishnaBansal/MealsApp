@@ -14,6 +14,7 @@ class CategoriesScreen extends StatelessWidget {
     final filteredMeals = dummyMeals
         .where((meal) => meal.categories.contains(category.id))
         .toList();
+ //wherever that particular meal id is same as the id of category passed in the function
 
     Navigator.of(context).push(
       MaterialPageRoute(
