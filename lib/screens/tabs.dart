@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/models/meal.dart';
 import 'package:meals_app/screens/categories.dart';
+import 'package:meals_app/screens/filters.dart';
 import 'package:meals_app/screens/meals.dart';
 import 'package:meals_app/widgets/main_drawer.dart';
 
@@ -18,9 +19,13 @@ class _TabsScreenState extends State<TabsScreen> {
   final List<Meal> _favouriteItemsMeals = [];
 
   void _setScreen(String identifier) {
-    if(identifier == 'filters') {
-    }else {
-      Navigator.of(context).pop();
+    Navigator.of(context).pop();
+    if (identifier == 'filters') {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const FiltersScreen(),
+        ),
+      );
     }
   }
 
